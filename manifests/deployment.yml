@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: gitprasannagakssample 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gitprasannagakssample
+  template:
+    metadata:
+      labels:
+        app: gitprasannagakssample 
+    spec:
+      containers:
+        - name: gitprasannagakssample 
+          image: acr0717.azurecr.io/gitprasannagakssample
+          ports:
+          - containerPort: 8080
